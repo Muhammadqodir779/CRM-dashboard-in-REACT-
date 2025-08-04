@@ -1,0 +1,151 @@
+.auth_verify {
+  display: flex;
+}
+
+.auth_verify_left {
+  width: 912px;
+  height: 100vh;
+  background-color: #1C2536;
+}
+
+.auth_verify_left_text {
+  padding-left: 61px;
+  padding-top: 330px;
+  color: var(--text-color)
+}
+
+.auth_verify_left_title {
+  font-family: var(--primary-font-family);
+  font-size: 33px;
+  font-weight: 700;
+  letter-spacing: 0%;
+}
+
+.auth_verify_left_paragraph {
+  color: #6C737F;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0%;
+  line-height: 24px;
+  padding-top: 10px;
+  font-family: var(--secondary-font-family);
+}
+
+.auth_verify_left_bold {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: 0%;
+  font-family: var(--secondary-font-family);
+  position: absolute;
+  top: 460px;
+}
+
+.auth_verify_left_icons {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin-top: 72px;
+  margin-left: 64px;
+}
+
+/* auth_verify_right  started*/
+
+.auth_verify_right {
+  margin-top: 190px;
+  margin-left: 64px;
+}
+
+.auth_verify_right_logo {
+  display: flex;
+}
+
+.auth_verify_right_logo_p {
+  font-size: 14px;
+  font-weight: 800;
+  font-family: var(--primary-font-family);
+  letter-spacing: 0.3px;
+}
+
+#login_in_pro {
+  font-size: 15px;
+  color: #6366F1;
+}
+
+.auth_verify_right_dash {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-top: 35px;
+}
+
+.auth_verify_right_dash_icon {
+  font-size: 24px;
+}
+
+.auth_verify_right_dash_p {
+  font-family: var(--secondary-font-family);
+  font-weight: 500;
+}
+
+.auth_verify_right_heading {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0%;
+  line-height: 28px;
+  font-family: var(--primary-font-family);
+  padding-top: 42px;
+}
+
+.auth_verify_right_input {
+  margin-top: 35px;
+  display: flex;
+  flex-direction: column;
+}
+
+.auth_verify_right_input_btn {
+  padding: 12px 220px;
+  border-radius: 12px;
+  background-color: #6366F1;
+  border: none;
+  margin-top: 24px;
+  font-family: var(--secondary-font-family);
+  color: var(--text-color);
+  transition: background-color, transform 0.3s;
+}
+
+.auth_verify_right_input_btn:hover {
+  background-color: #1bc5e3;
+  transform: scale(0.9);
+}
+
+.auth_verify_right_setting {
+  position: absolute;
+  top: 630px;
+  left: 1432px;
+  cursor: pointer;
+}
+
+
+
+.code-container {
+  display: flex;
+  gap: 8px;
+  margin-top: 70px;
+}
+
+.code-input {
+  width: 62px;
+  height: 50px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 20px;
+  text-align: center;
+  outline: none;
+  transition: border 0.2s ease;
+}
+
+.code-input:focus {
+  border: 1px solid #007bff;
+  box-shadow: 0 0 3px #007bff;
+}
