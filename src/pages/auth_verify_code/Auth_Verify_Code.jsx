@@ -67,18 +67,18 @@ const Auth_Verify_Code = () => {
             <b className="auth_verify_left_bold">Join 6,000+ forward-thinking companies:</b>
           </div>
           <div className="auth_verify_left_icons">
-            <img src={auth_samsung} alt="" />
-            <img src={auth_visma} alt="" />
-            <img src={auth_bolt} alt="" />
-            <img src={auth_aws} alt="" />
-            <img src={auth_accenture} alt="" />
-            <img src={auth_att} alt="" />
+            <img src={auth_samsung} alt="img" />
+            <img src={auth_visma} alt="img" />
+            <img src={auth_bolt} alt="img" />
+            <img src={auth_aws} alt="img" />
+            <img src={auth_accenture} alt="img" />
+            <img src={auth_att} alt="img" />
           </div>
         </div>
 
         <div className="auth_verify_right">
           <div className="auth_verify_right_logo">
-            <img src={auth_logo} alt="" className='auth_login_in_right_logo_img' />
+            <img src={auth_logo} alt="img" className='auth_login_in_right_logo_img' />
             <p className='auth_verify_right_logo_p'>Devias Kit <span id='login_in_pro'>PRO</span></p>
           </div>
 
@@ -113,7 +113,7 @@ const Auth_Verify_Code = () => {
             >
               Verify
             </button>
-            <img src={auth_setting} alt="" className='auth_verify_right_setting' />
+            <img src={auth_setting} alt="img" className='auth_verify_right_setting' />
           </div>
         </div>
       </div>
