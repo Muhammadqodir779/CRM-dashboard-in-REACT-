@@ -94,3 +94,21 @@
   padding: 32px 24px;
   background-color: #F0FDF9;
 }
+
+.ecommerce_line {
+  width: 780px;
+  height: 435px;
+  padding-top: 30px;
+  margin-left: 280px;
+  margin-top: -428px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ecommerce_line_title {
+  font-size: 18px;
+  font-weight: 700;
+  padding: 24px;
+  font-family: var(--primary-font-family);
+}

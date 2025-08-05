@@ -5,13 +5,8 @@ import { IoMdRefresh } from "react-icons/io";
 import ecommerce_image1 from "../../assets/ecommerce_image1.png"
 import ecommerce_image2 from "../../assets/ecommerce_image2.png"
 import ecommerce_image3 from "../../assets/ecommerce_image3.png"
-
-const selling_products = [
-  {
-    heading: "Top Selling Products",
-    title: ""
-  }
-]
+import EcommerceSellingProduct from '../../components/ecommerceSellingProduct/EcommerceSellingProduct';
+import EcommerceLinechart from '../../components/ecommerceLinechart/EcommerceLinechart';
 
 
 const Ecommerce = () => {
@@ -72,6 +67,19 @@ const Ecommerce = () => {
             </div>
 
           </div>
+
+        </div>
+
+        {/* ecommerce selling product */}
+
+        <EcommerceSellingProduct />
+
+        {/* ecommerce line chart */}
+        <div className="ecommerce_line">
+
+          <h3 className='ecommerce_line_title'>Sales Revenue</h3>
+
+          <EcommerceLinechart />
 
         </div>
 
