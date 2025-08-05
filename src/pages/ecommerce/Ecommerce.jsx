@@ -6,6 +6,13 @@ import ecommerce_image1 from "../../assets/ecommerce_image1.png"
 import ecommerce_image2 from "../../assets/ecommerce_image2.png"
 import ecommerce_image3 from "../../assets/ecommerce_image3.png"
 
+const selling_products = [
+  {
+    heading: "Top Selling Products",
+    title: ""
+  }
+]
+
 
 const Ecommerce = () => {
   return (
