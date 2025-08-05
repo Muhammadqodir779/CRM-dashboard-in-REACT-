@@ -7,6 +7,8 @@ import ecommerce_image2 from "../../assets/ecommerce_image2.png"
 import ecommerce_image3 from "../../assets/ecommerce_image3.png"
 import EcommerceSellingProduct from '../../components/ecommerceSellingProduct/EcommerceSellingProduct';
 import EcommerceLinechart from '../../components/ecommerceLinechart/EcommerceLinechart';
+import EcommercePiechart from '../../components/ecommercePiechart/EcommercePiechart';
+import EcommerceByCountry from '../../components/ecommerceByCountry/EcommerceByCountry';
 
 
 const Ecommerce = () => {
@@ -75,11 +77,36 @@ const Ecommerce = () => {
         <EcommerceSellingProduct />
 
         {/* ecommerce line chart */}
+
         <div className="ecommerce_line">
 
           <h3 className='ecommerce_line_title'>Sales Revenue</h3>
 
           <EcommerceLinechart />
+
+        </div>
+
+        {/* ecommerce pie chart */}
+
+        <div className="ecommerce_pie">
+
+          <h3 className='ecommerce_pie_title'>Cost Breakdown</h3>
+
+          <p className='ecommerce_pie_paragraph'>Based on selected period</p>
+
+          <EcommercePiechart />
+
+          <h3 className='ecommerce_pie_h1'>TOP CHANNELS</h3>
+
+          <h3 className='ecommerce_pie_h2'>VALUE</h3>
+
+        </div>
+
+        {/* ecommerce sales by country */}
+
+        <div className="ecommerce_country">
+
+          <EcommerceByCountry />
 
         </div>
 
