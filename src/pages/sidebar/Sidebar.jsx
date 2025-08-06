@@ -19,7 +19,7 @@ const Sidebar = ({ children }) => {
     <div className="analytics">
       <div className={`sidebar ${open ? 'open' : 'closed'}`}>
         <div className="sidebar-header" onClick={toggleSidebar}>
-          <img src={logo} alt="Logo" />
+          <img src={logo} alt="Logo" loading='lazy' />
           {open && <span className="sidebar-title">Devias</span>}
         </div>
 
@@ -54,9 +54,9 @@ const Sidebar = ({ children }) => {
 
         <div className="sidebar_header">
 
-          <img src={search_btn} alt="" className='sidebar_header_image1' />
+          <img src={search_btn} alt="img" className='sidebar_header_image1' />
 
-          <img src={header} alt="" className='sidebar_header_image2' />
+          <img src={header} alt="img" className='sidebar_header_image2' />
 
         </div>
 
