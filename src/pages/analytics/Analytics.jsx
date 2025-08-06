@@ -12,7 +12,6 @@ import {
   TableBody,
 } from '@mui/material';
 import { PieChart } from '@mui/x-charts';
-import Sidebar from '../sidebar/Sidebar';
 import HorizontalBars from './HorizontalBars';
 import usflag from "../../assets/flag-us.png"
 import TinyLineChart from './TinyLineChart';
@@ -145,34 +144,32 @@ const MostVisitedPages = () => {
 
 const Analytics = () => {
   return (
-    <Sidebar>
-      <div style={{
-        padding: '24px',
-        marginLeft: '260px'
-      }}>
+    <div style={{
+      padding: '24px',
+      marginLeft: '30px'
+    }}>
 
 
-        <Grid container justifyContent="space-between" alignItems="center">
-          <Typography variant="h4" fontWeight="bold">Analytics</Typography>
-          <Button variant="contained" color="primary">+ New Dashboard</Button>
-        </Grid>
+      <Grid container justifyContent="space-between" alignItems="center">
+        <Typography variant="h4" fontWeight="bold">Analytics</Typography>
+        <Button variant="contained" color="primary">+ New Dashboard</Button>
+      </Grid>
 
-        <Grid container spacing={4} marginTop={2}>
-          <Grid item xs={12} md={4}><CardItem title="Impressions" value="36.6K" /></Grid>
-          <Grid item xs={12} md={4}><CardItem title="Engagements" value="19K" /></Grid>
-          <Grid item xs={12} md={4}><CardItem title="Spent" value="$41.2K" /></Grid>
-        </Grid>
+      <Grid container spacing={4} marginTop={2}>
+        <Grid item xs={12} md={4}><CardItem title="Impressions" value="36.6K" /></Grid>
+        <Grid item xs={12} md={4}><CardItem title="Engagements" value="19K" /></Grid>
+        <Grid item xs={12} md={4}><CardItem title="Spent" value="$41.2K" /></Grid>
+      </Grid>
 
-        <Charts />
+      <Charts />
 
-        <Grid container spacing={2} marginTop={-75} marginLeft={105}>
-          <Grid item xs={12} md={8}><VisitsByCountry /></Grid>
-        </Grid>
-        <Grid container spacing={2} marginTop={4} >
-          <Grid item xs={12} md={6}><MostVisitedPages /></Grid>
-        </Grid>
-      </div>
-    // </Sidebar>
+      <Grid container spacing={2} marginTop={-75} marginLeft={105}>
+        <Grid item xs={12} md={8}><VisitsByCountry /></Grid>
+      </Grid>
+      <Grid container spacing={2} marginTop={4} >
+        <Grid item xs={12} md={6}><MostVisitedPages /></Grid>
+      </Grid>
+    </div>
   );
 };
 

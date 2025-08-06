@@ -93,10 +93,35 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-left: 260px;
+  /* margin-left: 260px; */
 }
 
 .sidebar_header_image1,
 .sidebar_header_image2 {
   cursor: pointer;
+}
+
+
+/*  analytics_main */
+
+.analytics_main {
+  transition: margin-left 0.3s ease;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+/* Sidebar ochiq bo‘lsa */
+.main-expanded {
+  margin-left: 220px;
+  /* .sidebar.open bilan bir xil */
+}
+
+/* Sidebar yopiq bo‘lsa */
+.main-collapsed {
+  margin-left: 60px;
+  /* .sidebar.closed bilan bir xil */
+}
+
+body {
+  overflow-x: hidden;
 }

@@ -1,6 +1,5 @@
 import React from 'react'
 import "./Ecommerce.css"
-import Sidebar from '../sidebar/Sidebar'
 import { IoMdRefresh } from "react-icons/io";
 import ecommerce_image1 from "../../assets/ecommerce_image1.png"
 import ecommerce_image2 from "../../assets/ecommerce_image2.png"
@@ -14,8 +13,6 @@ import EcommerceByCountry from '../../components/ecommerceByCountry/EcommerceByC
 const Ecommerce = () => {
   return (
     <div className='ecommerce'>
-
-      <Sidebar>
 
         {/* ecommerce_header */}
 
@@ -109,8 +106,6 @@ const Ecommerce = () => {
           <EcommerceByCountry />
 
         </div>
-
-      </Sidebar>
 
     </div>
   )

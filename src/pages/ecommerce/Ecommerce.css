@@ -4,7 +4,7 @@
   justify-content: space-between;
   padding-top: 24px;
   padding-right: 20px;
-  padding-left: 284px;
+  padding-left: 30px;
 }
 
 .ecommerce_header_title {
@@ -37,7 +37,7 @@
   padding: 32px 24px;
   background-color: #fff;
   border-radius: 20px;
-  margin-left: 284px;
+  margin-left: 30px;
   margin-top: 16px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
@@ -99,7 +99,7 @@
   width: 780px;
   height: 435px;
   padding-top: 30px;
-  margin-left: 280px;
+  margin-left: 30px;
   margin-top: -428px;
   background-color: #fff;
   border-radius: 20px;
@@ -118,7 +118,7 @@
   height: 456px;
   margin-top: 32px;
   padding: 20px;
-  margin-left: 1100px;
+  margin-left: 850px;
   border-radius: 20px;
   background-color: #fff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);

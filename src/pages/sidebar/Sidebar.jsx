@@ -11,7 +11,6 @@ import header from "../../assets/header_juftlik.png"
 import search_btn from "../../assets/search_btn.png"
 
 
-
 const Sidebar = ({ children }) => {
   const [open, setOpen] = useState(true);
   const toggleSidebar = () => setOpen(!open);
@@ -51,7 +50,7 @@ const Sidebar = ({ children }) => {
         </div>
       </div>
 
-      <div className="analytics_main">
+      <div className={`analytics_main ${open ? 'main-expanded' : 'main-collapsed'}`}>
 
         <div className="sidebar_header">
 

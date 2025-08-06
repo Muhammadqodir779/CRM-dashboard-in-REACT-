@@ -20,7 +20,7 @@ export default function EcommerceByCountry() {
         height: 500,
         p: 3,
         borderRadius: 4,
-        ml: '280px',
+        ml: '30px',
         mt: '-450px',
         mb: '10px' // ← chapdan 250px margin
       }}
