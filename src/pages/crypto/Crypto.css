@@ -1,0 +1,30 @@
+.crypto_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 24px;
+  padding-right: 20px;
+  padding-left: 30px;
+}
+
+.crypto_header_title {
+  font-size: 33px;
+  font-weight: 700;
+}
+
+.crypto_header_btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  padding: 10px 24px;
+  background-color: #6366F1;
+  border-radius: 12px;
+  transition: background-color,
+    transform 0.4s ease-in-out;
+}
+
+.crypto_header_btn:hover {
+  background-color: #1bc5e3;
+  transform: scale(0.9);
+}
