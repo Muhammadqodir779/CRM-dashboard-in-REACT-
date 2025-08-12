@@ -7,7 +7,7 @@ import {
   markElementClasses,
 } from '@mui/x-charts/LineChart';
 
-const pData = [2400, 1398, 8800, 3908, 4800, 3800, 4300, 4300, 2400, 8600, 1450, 4570, 3540, 2457, 6547];
+const pData = [1000, 2000, 5000, 3000, 4000, 6000, 9000, 8000, 7000, 3000, 5000, 7000, 4000, 3000, 1000];
 const xLabels = [
   'Page A',
   'Page B',
@@ -36,7 +36,7 @@ export default function TinyLineChart() {
       yAxis={[{ position: 'none' }]}
       sx={{
         [`& .${lineElementClasses.root}`]: {
-          stroke: '#8884d8',
+          stroke: '#06AED4',
           strokeWidth: 2,
         },
         [`& .${markElementClasses.root}`]: {
