@@ -14,6 +14,7 @@ import { MdNorthEast } from "react-icons/md";
 import { MdOutlineSouthEast } from "react-icons/md";
 import CryptoTranszction from "../../components/cryptoTransaction/CryptoTransaction";
 import CryptoOperation from "../../components/cryptoOperation/CryptoOperation"
+import CryptoPro from "../../components/cryptoPro/CryptoPro"
 
 
 
@@ -155,6 +156,14 @@ const Crypto = () => {
       <div className="crypto_operation">
 
         <CryptoOperation />
+
+      </div>
+
+      {/* crypto-Pro */}
+
+      <div className="crypto_pro">
+
+        <CryptoPro />
 
       </div>
 
