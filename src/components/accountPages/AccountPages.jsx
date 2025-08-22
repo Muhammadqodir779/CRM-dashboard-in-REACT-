@@ -14,6 +14,12 @@ import { Link } from 'react-router-dom';
 import setting from "../../assets/auth_setting.png"
 import AccountBillingBtn from "../../components/accountBillingBtn/AccountBillingBtn"
 import AccountTeamBtn from "../../components/accountTeamBtn/AccountTeamBtn"
+import AccountTeamAvatar1 from "../../assets/accountTeamAvatar1.png"
+import AccountTeamAvatar2 from "../../assets/accountTeamAvatar2.png"
+import { BsThreeDots } from "react-icons/bs";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 
 
 
@@ -23,6 +29,12 @@ export default function LabTabs() {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
+
+  const notifications_title = [
+    { title: "Product updates", p: "News, announcements, and product updates." },
+    { title: "Security updates", p: "Important notifications about your account security." },
+    { title: "Security updates", p: "Important notifications about your account security." },
+  ];
 
 
   return (
@@ -40,7 +52,9 @@ export default function LabTabs() {
 
         <TabPanel value="1">
 
-          <div className='w-[100%] h-[332px] rounded-3xl shadow-md'>
+          <div data-aos="fade-up"
+            data-aos-anchor-placement="top-bottom"
+            className='w-[100%] h-[332px] rounded-3xl shadow-md'>
 
             <h3 className='font-bold text-[17px] text-[#111927]' style={{
               padding: "32px 24px"
@@ -82,7 +96,9 @@ export default function LabTabs() {
 
           <div className='w-[100%] h-[223px] rounded-3xl shadow-md' style={{
             marginTop: "32px"
-          }}>
+          }}
+            data-aos="zoom-in-right"
+          >
 
             <h3 className='font-bold text-[17px] text-[#111927]' style={{
               padding: "32px 24px"
@@ -138,7 +154,8 @@ export default function LabTabs() {
 
           <div className='w-[100%] h-[155px] rounded-3xl shadow-md' style={{
             marginTop: "32px"
-          }}>
+          }}
+          >
 
             <h3 className='font-bold text-[17px] text-[#111927]' style={{
               padding: "32px 24px"
@@ -166,7 +183,7 @@ export default function LabTabs() {
 
         <TabPanel value="2">
 
-          <div className='w-[100%] h-[730px] rounded-3xl shadow-md' style={{
+          <div data-aos="zoom-in" className='w-[100%] h-[730px] rounded-3xl shadow-md' style={{
             paddingLeft: "24px",
             paddingTop: "32px",
             paddingRight: "24px"
@@ -178,11 +195,11 @@ export default function LabTabs() {
               paddingTop: "2px"
             }}>You can upgrade and downgrade whenever you want</p>
 
-            <div>
+            <div data-aos="fade-down">
               <Billing_cards />
             </div>
 
-            <hr className='w-[98%] h-[1px] text-[#6C737F]' style={{
+            <hr className='w-[98%] h-[1px] text-[#F2F4F7]' style={{
               marginTop: "24px"
             }} />
 
@@ -261,35 +278,182 @@ export default function LabTabs() {
 
         <TabPanel value="3">
 
-          <div className='w-[100%] h-[110px] rounded-3xl shadow-lg' style={{
-            marginTop: "25px",
-            padding: "32px 24px"
-          }}>
+          <div data-aos="flip-up">
 
-            <h2 className='font-bold text-[17px] text-[#111927]'>Invite members</h2>
-
-            <p className='text-[#6C737F] text-[14px] font-normal'>You currently pay for 2 Editor Seats.</p>
-
-            <div className='flex items-center gap-[10px]' style={{
-              marginTop: "-50px"
+            <div className='w-[100%] h-[110px] rounded-3xl shadow-lg' style={{
+              marginTop: "25px",
+              padding: "32px 24px"
             }}>
 
-              <input type="email" placeholder='Email address' className='w-[722px] h-[54px] text-[#6C737F] border  rounded-2xl' style={{
-                paddingLeft: "12px",
-                marginLeft: "470px",
-              }} />
+              <h2 className='font-bold text-[17px] text-[#111927]'>Invite members</h2>
 
-              <AccountTeamBtn />
+              <p className='text-[#6C737F] text-[14px] font-normal'>You currently pay for 2 Editor Seats.</p>
+
+              <div className='flex items-center gap-[10px]' style={{
+                marginTop: "-50px"
+              }}>
+
+                <input type="email" placeholder='Email address' className='w-[722px] h-[54px] text-[#6C737F] border  rounded-2xl' style={{
+                  paddingLeft: "12px",
+                  marginLeft: "470px",
+                }} />
+
+                <AccountTeamBtn />
+
+              </div>
 
             </div>
 
+            <div className='flex gap-[760px] w-[100%]' style={{
+              marginLeft: "24px",
+              marginTop: "24px"
+            }}>
 
+              <h2 className='font-semibold text-[12px] text-[#2F3746]'>MEMBER</h2>
+
+              <h2 className='font-semibold text-[12px] text-[#2F3746]'>ROLE</h2>
+
+            </div>
+
+            <div className='flex flex-col rounded-3xl shadow-lg w-[100%] h-[180px]' style={{
+              marginTop: "24px",
+              padding: "24px"
+            }}>
+
+              <div>
+
+                <img src={AccountTeamAvatar1} alt="avatar" />
+
+                <h3 className='text-[14px] text-[#111927] font-medium' style={{
+                  paddingLeft: "58px",
+                  marginTop: "-40px"
+                }}>Cao Yu</h3>
+
+                <p className='text-[14px] text-[#6C737F] font-normal' style={{
+                  paddingLeft: "58px"
+                }}>cao.yu@devias.io</p>
+
+                <button className='bg-[#6366F11F] text-[#4338CA] text-[12px] font-semibold rounded-3xl' style={{
+                  padding: "10px",
+                  marginLeft: "810px",
+                  transform: "translateY(-40px)"
+                }}>OWNER</button>
+
+                <BsThreeDots style={{
+                  fontSize: "24px",
+                  position: "absolute",
+                  left: "1420px",
+                  top: "500px",
+                  cursor: "pointer"
+                }} />
+
+              </div>
+
+              <hr style={{
+                width: "100%",
+                height: "1px",
+                color: "#F2F4F7",
+                marginTop: "-20px"
+              }} />
+
+              <div style={{
+                marginTop: "24px"
+              }}>
+
+                <img src={AccountTeamAvatar2} alt="avatar" />
+
+                <h3 className='text-[14px] text-[#111927] font-medium' style={{
+                  paddingLeft: "58px",
+                  marginTop: "-40px"
+                }}>Siegbert Gottfried</h3>
+
+                <p className='text-[14px] text-[#6C737F] font-normal' style={{
+                  paddingLeft: "58px"
+                }}>siegbert.gottfried@devias.io</p>
+
+                <h4 className='font-normal text-[14px] text-[#111927]' style={{
+                  paddingLeft: "815px",
+                  marginTop: "-25px"
+                }}>Standard</h4>
+
+                <BsThreeDots style={{
+                  fontSize: "24px",
+                  position: "absolute",
+                  left: "1420px",
+                  top: "590px",
+                  cursor: "pointer"
+                }} />
+
+              </div>
+
+            </div>
 
           </div>
 
         </TabPanel>
 
-        <TabPanel value="4">Notifications</TabPanel>
+        <TabPanel value="4">
+          <div
+            className='w-[100%] h-[330px] rounded-3xl shadow-lg'
+            data-aos="flip-left"
+            style={{
+              padding: "24px",
+              marginTop: "24px"
+            }}
+          >
+            <div className='flex flex-col gap-[188px]'>
+              <h2 className='font-bold text-[17px] text-[#111927]'>Email</h2>
+              <h2 className='font-bold text-[17px] text-[#111927]'>Phone notifications</h2>
+            </div>
+
+            <div style={{
+              marginLeft: "466px",
+              marginTop: "-325px"
+            }}>
+              {notifications_title.map((item, index) => (
+                <div key={index} className=''>
+                  <h2 className='font-medium text-[#111927] text-[16px]' style={{
+                    paddingTop: "60px"
+                  }}>{item.title}</h2>
+                  <p className='text-[#6C737F] text-[14px] font-normal' style={{
+                    paddingTop: "10px"
+                  }}>{item.p}</p>
+                </div>
+              ))}
+            </div>
+
+            <hr style={{
+              width: "60%",
+              height: "1px",
+              color: "#F2F4F7",
+              marginLeft: "466px",
+              marginTop: "-200px"
+            }} />
+
+            <hr style={{
+              width: "100%",
+              height: "1px",
+              color: "#F2F4F7",
+              marginTop: "120px"
+            }} />
+
+            <div className='flex flex-col gap-[66px]' style={{
+              marginLeft: "1111px",
+              marginTop: "-180px"
+            }}>
+              <AccountSwitchBtn />
+              <AccountSwitchBtn />
+              <AccountSwitchBtn />
+            </div>
+
+            <img src={setting} alt="image" style={{
+              marginLeft: "1110px",
+              marginTop: "73px",
+              cursor: "pointer"
+            }} />
+          </div>
+        </TabPanel>
+
         <TabPanel value="5">Security</TabPanel>
       </TabContext>
     </Box>

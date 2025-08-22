@@ -23,9 +23,21 @@ import FileManager from './pages/fileManager/FileManager'
 import Kanban from './pages/kanban/Kanban'
 import Main from './pages/main/Main'
 import Chat from './pages/chat/Chat'
-import SidebarLayout from './components/sidebarLayout/SidebarLayout' // 🆕
+import SidebarLayout from './components/sidebarLayout/SidebarLayout'
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from 'react'
 
 const App = () => {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+      offset: 100
+    });
+  }, []);
+
   return (
     <Routes>
       {/* Auth routes */}
