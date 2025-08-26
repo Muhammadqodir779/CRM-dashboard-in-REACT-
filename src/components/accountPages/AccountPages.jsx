@@ -17,9 +17,9 @@ import AccountTeamBtn from "../../components/accountTeamBtn/AccountTeamBtn"
 import AccountTeamAvatar1 from "../../assets/accountTeamAvatar1.png"
 import AccountTeamAvatar2 from "../../assets/accountTeamAvatar2.png"
 import { BsThreeDots } from "react-icons/bs";
-import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { useEffect } from 'react';
+import { FaArrowRight } from "react-icons/fa";
+import AccountSecurityTable from "../../components/accountSecurityTable/AccountSecurityTable"
 
 
 
@@ -454,7 +454,134 @@ export default function LabTabs() {
           </div>
         </TabPanel>
 
-        <TabPanel value="5">Security</TabPanel>
+        <TabPanel value="5">
+
+          <div>
+
+            <div className='w-[100%] h-[120px] rounded-3xl shadow-lg' style={{
+              padding: "32px 24px",
+              marginTop: "24px"
+            }}>
+
+              <h2 className='font-bold text-[#111927] text-[17px]'>Change password</h2>
+
+              <input type="password" placeholder='Thebestpasswordever123#' className='w-[54%] h-[55px] rounded-xl border text-[#11192761]' style={{
+                padding: "10px",
+                marginLeft: "466px",
+                marginTop: "-20px"
+              }} />
+
+              <p className='text-[#6366F1] text-[14px] font-semibold' style={{
+                marginLeft: "1142px",
+                marginTop: "-40px",
+                cursor: "pointer"
+              }}>Edit</p>
+
+            </div>
+
+            <div className='w-[100%] h-[322px] rounded-3xl shadow-lg'
+              style={{
+                padding: "32px 24px",
+                marginTop: "32px"
+              }}>
+
+              <h2 className='font-bold text-[#111927] text-[17px]'>Multi Factor Authentication</h2>
+
+              <div className='flex gap-[32px]' style={{
+                marginTop: "16px"
+              }}>
+
+                <div className='w-[556px] h-[222px] rounded-2xl shadow-md' style={{
+                  padding: "35px 25px"
+                }}>
+
+                  <p className='font-normal text-[14px] text-[#F04438]'>Off</p>
+
+                  <h3 className='font-medium text-[#111927] text-[14px]' style={{
+                    paddingTop: "14px"
+                  }}>Authenticator App</h3>
+
+                  <p className='text-[#6C737F] text-[14px] font-normal' style={{
+                    paddingTop: "14px"
+                  }}>Use an authenticator app to generate one time security codes.</p>
+
+                  <button className='border rounded-2xl flex items-center gap-[6px] text-[#6366F1]' style={{
+                    padding: "8px 20px",
+                    marginTop: "35px"
+                  }}>Set Up<FaArrowRight />
+                  </button>
+
+                </div>
+
+                <div className='w-[556px] h-[222px] rounded-2xl shadow-md' style={{
+                  padding: "35px 25px"
+                }}>
+
+                  <p className='font-normal text-[14px] text-[#F04438]'>Off</p>
+
+                  <h3 className='font-medium text-[#111927] text-[14px]' style={{
+                    paddingTop: "14px"
+                  }}>Text Message</h3>
+
+                  <p className='text-[#6C737F] text-[14px] font-normal' style={{
+                    paddingTop: "14px"
+                  }}>Use your mobile phone to receive security codes via SMS.</p>
+
+                  <button className='border rounded-2xl flex items-center gap-[6px] text-[#6366F1]' style={{
+                    padding: "8px 20px",
+                    marginTop: "35px"
+                  }}>Set Up<FaArrowRight />
+                  </button>
+
+                </div>
+
+              </div>
+
+            </div>
+
+            <div>
+
+              <div className='w-[100%] h-[100px] shadow-lg rounded-xl flex flex-col gap-[2px]' style={{
+                padding: "32px 24px",
+                marginTop: "32px"
+              }}>
+
+                <h2 className='font-bold text-[17px] text-[#111927]'>Login history</h2>
+
+                <p className='text-[#6C737F] text-[14px] font-normal'>Your recent login activity</p>
+
+              </div>
+
+              {/* <div className='flex' style={{
+                marginLeft: "24px",
+                marginTop: "12px"
+              }}>
+
+                <h2 className='text-[#2F3746] text-[12px] font-semibold'>Login type</h2>
+                <h2 className='text-[#2F3746] text-[12px] font-semibold' style={{
+                  paddingLeft: "438px"
+                }}>IP Address</h2>
+
+                <h2 className='text-[#2F3746] text-[12px] font-semibold' style={{
+                  paddingLeft: "210px"
+                }}>Client</h2>
+
+              </div> */}
+
+              <div style={{
+                marginTop: "32px"
+              }}>
+
+                <AccountSecurityTable />
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </TabPanel>
+
       </TabContext>
     </Box>
   );
