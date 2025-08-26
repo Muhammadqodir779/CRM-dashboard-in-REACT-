@@ -1,3 +1,5 @@
+/* Sizning mavjud CSS kodlaringiz... */
+
 .sidebar {
   height: 100vh;
   background-color: #1e293b;
@@ -48,7 +50,6 @@
   display: none;
 }
 
-
 .sidebar-menu {
   display: flex;
   flex-direction: column;
@@ -88,11 +89,63 @@
   padding-left: 35px !important;
 }
 
+/* ACCORDION STILLARI */
+.accordion-section {
+  width: 100%;
+}
+
+.accordion-header {
+  position: relative;
+  justify-content: space-between;
+}
+
+.accordion-header:hover {
+  background-color: #334155;
+}
+
+.accordion-arrow {
+  margin-left: auto;
+  font-size: 12px;
+  transition: transform 0.3s ease;
+}
+
+.accordion-content {
+  overflow: hidden;
+  transition: all 0.3s ease;
+  background-color: #0f172a;
+}
+
+.accordion-content.expanded {
+  max-height: 200px;
+  /* Har bir sub-item uchun ~40px */
+  opacity: 1;
+}
+
+.accordion-content.collapsed {
+  max-height: 0;
+  opacity: 0;
+}
+
+.accordion-content .sidebar-link {
+  padding: 8px 15px;
+  padding-left: 45px;
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+.accordion-content .sidebar-link:hover {
+  background-color: #1e293b;
+  color: #cbd5e1;
+}
+
+.accordion-content .sidebar-link span {
+  margin-left: 8px;
+}
+
 .sidebar_header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* margin-left: 260px; */
 }
 
 .sidebar_header_image1,
@@ -100,25 +153,18 @@
   cursor: pointer;
 }
 
-
-/*  analytics_main */
-
 .analytics_main {
   transition: margin-left 0.3s ease;
   padding: 20px;
   min-height: 100vh;
 }
 
-/* Sidebar ochiq bo‘lsa */
 .main-expanded {
   margin-left: 220px;
-  /* .sidebar.open bilan bir xil */
 }
 
-/* Sidebar yopiq bo‘lsa */
 .main-collapsed {
   margin-left: 60px;
-  /* .sidebar.closed bilan bir xil */
 }
 
 body {

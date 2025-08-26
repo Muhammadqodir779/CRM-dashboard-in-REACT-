@@ -27,6 +27,9 @@ import SidebarLayout from './components/sidebarLayout/SidebarLayout'
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from 'react'
+import CustomersList from './pages/customersList/CustomersList'
+import CustomersDetails from './pages/customersDetails/CustomersDetails'
+import CustomersEdit from './pages/customersEdit/CustomersEdit'
 
 const App = () => {
 
@@ -66,6 +69,10 @@ const App = () => {
         <Route path='/kanban' element={<Kanban />} />
         <Route path='/main' element={<Main />} />
         <Route path='/chat' element={<Chat />} />
+        {/* accordion ichidagi routelar */}
+        <Route path='/customers_list' element={<CustomersList />} />
+        <Route path='/customers_details' element={<CustomersDetails />} />
+        <Route path='/customers_edit' element={<CustomersEdit />} />
       </Route>
     </Routes>
   )
